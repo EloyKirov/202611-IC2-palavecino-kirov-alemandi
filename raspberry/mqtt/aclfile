@@ -1,0 +1,9 @@
+# Node-RED: lee la telemetria de todos los nodos y les manda comandos
+user nodealert
+topic read nodealert/+/telemetry
+topic write nodealert/+/commands
+
+# ESP32 (firmware control-luz) y simulator.py: publica telemetria y escucha comandos
+user nodealert_esp32
+topic write nodealert/+/telemetry
+topic read nodealert/+/commands
